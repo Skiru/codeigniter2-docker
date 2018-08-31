@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>SimpleExcel</Author>
+  <Company>SimpleExcel</Company>
+  <Created>2018-08-31T09:58:49Z</Created>
+  <Keywords>SimpleExcel</Keywords>
+  <LastAuthor>SimpleExcel</LastAuthor>
+  <Version>12.00</Version>
+ </DocumentProperties>
+ <Worksheet ss:Name="Sheet1">
+  <Table>
+    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">ID</Data></Cell>
+    <Cell><Data ss:Type="String">Name</Data></Cell>
+    <Cell><Data ss:Type="String">Kode</Data></Cell>
+    </Row>
+    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Kab. Bogor</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    </Row>
+    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">Kab. Cianjur</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    </Row>
+    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">Kab. Sukabumi</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    </Row>
+    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">Kab. Tasikmalaya</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

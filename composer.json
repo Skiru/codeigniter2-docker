@@ -1,0 +1,17 @@
+{
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mateusz Kozioł"
+    }
+  ],
+  "config":{
+    "vendor-dir": "application/vendor"
+  },
+  "require": {
+    "php": "^5.6"
+  },
+  "autoload":{
+    "psr-4": {"App\\": "application/"}
+  }
+}
