@@ -1,5 +1,7 @@
 <?php
 
+use App\libraries\Speaker\GoodbyeSpeaker;
+use App\libraries\Speaker\HelloSpeaker;
 use Pimple\Container as PimpleContainer;
 
 class CI_Container
@@ -17,7 +19,8 @@ class CI_Container
     public function __construct()
     {
         $this->container = new PimpleContainer([
-            'speaker' => App\libraries\Speaker\HelloSpeaker::class
+            HelloSpeaker::class => new HelloSpeaker(),
+            GoodbyeSpeaker::class => new GoodbyeSpeaker()
         ]);
     }
 }
