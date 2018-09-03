@@ -1,31 +1,39 @@
 <?php
 
+use App\libraries\ControllerInjection\ControllerInjection;
+use App\libraries\Speaker\GoodbyeSpeaker;
 use App\libraries\Speaker\HelloSpeaker;
 
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller
+class Welcome extends ControllerInjection
 {
     /**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+     * @var HelloSpeaker $helloer
+     */
+    private $helloer;
+
+    /**
+     * @var GoodbyeSpeaker $goodbye
+     */
+    private $goodbye;
+
+
+    public function __construct($helloer = null, $goodbye = null)
+    {
+        parent::__construct([
+            GoodbyeSpeaker::class => &$goodbye,
+            HelloSpeaker::class => &$helloer
+        ]);
+        $this->goodbye = $goodbye;
+        $this->helloer = $helloer;
+    }
+
 	public function index()
 	{
-	    $speaker = new HelloSpeaker();
-
-		$this->load->view('welcome_message',['message'=>$speaker->say()]);
+	    $hello = $this->helloer->say();
+	    $goodbye = $this->goodbye->say();
+		$this->load->view('welcome_message',['message'=>$hello.' and '.$goodbye]);
 	}
 }
 
