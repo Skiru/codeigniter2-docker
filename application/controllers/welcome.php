@@ -1,7 +1,5 @@
 <?php
 
-use App\libraries\Speaker\HelloSpeaker;
-
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Welcome extends CI_Controller
@@ -23,9 +21,10 @@ class Welcome extends CI_Controller
 	 */
 	public function index()
 	{
-	    $speaker = new HelloSpeaker();
-
-		$this->load->view('welcome_message',['message'=>$speaker->say()]);
+        $container = $this->{'container'}->getContainer();
+        $speaker = new $container['speaker'];
+        var_dump($speaker->say());
+		$this->load->view('welcome_message',['message'=>'hi']);
 	}
 }
 

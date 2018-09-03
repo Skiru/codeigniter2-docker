@@ -9,7 +9,13 @@
 |	http://codeigniter.com/user_guide/general/hooks.html
 |
 */
-
+$hook['pre_system'] = array(
+    'class'    => 'DiContainer',
+    'function' => 'initContainer',
+    'filename' => 'DiContainer.php',
+    'filepath' => 'hooks',
+    'params'   => ''
+);
 
 
 /* End of file hooks.php */
